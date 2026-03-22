@@ -3,10 +3,6 @@ import { UserClient } from '../../src/api/clients/userClient';
 import { ApiHelper } from '../../src/utils/api/apiHelper';
 import { ENV } from '../../.env';
 
-// ✅ Load env from ROOT (fix for your issue)
-// dotenv.config({
-//   path: path.resolve(__dirname, '../../.env')
-// });
 
 type Fixtures = {
   userClient: UserClient;
@@ -14,10 +10,7 @@ type Fixtures = {
 
 export const test = base.extend<Fixtures>({
 
-  // 🔥 API CLIENT FIXTURE
-  userClient: async ({}, use) => {
-
-    // ✅ Strong validation (interview ++)
+  userClient: async ({ }, use) => {
     if (!ENV.API_BASE_URL) {
       throw new Error('API_BASE_URL is not defined in .env');
     }
@@ -30,12 +23,9 @@ export const test = base.extend<Fixtures>({
     await apiHelper.init(ENV.API_BASE_URL, {
       'x-api-key': ENV.API_KEY
     });
-
     const client = new UserClient(apiHelper.context);
 
     await use(client);
-
-    // ✅ Cleanup (VERY IMPORTANT)
     await apiHelper.dispose();
   }
 

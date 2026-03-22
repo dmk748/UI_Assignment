@@ -10,10 +10,10 @@ export const testData = {
 export const userData = {
   createUser: {
     name: 'Mukkavar',
-    job: 'QA'
+    job: 'QA Engineer'
   },
   updateUser: {
     name: 'Mukkavar Updated',
-    job: 'Senior QA'
+    job: 'Senior QA Engineer'
   }
 };

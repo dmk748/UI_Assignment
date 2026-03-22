@@ -70,6 +70,7 @@ export class BookstorePage {
         }
     }
 
+    //logout from the application
     async logout() {
         try {
             await this.logoutBtn.click();
