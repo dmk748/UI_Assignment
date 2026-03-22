@@ -39,7 +39,7 @@ export class BookstorePage {
 
     async isBookVisible(bookName: string) {
         try{
-        return await this.bookDetails.filter({ hasText: bookName }).isVisible();
+        return this.page.getByRole('link', { name: bookName }).isVisible();
         } catch (error) {
             console.error('Error occurred while checking book visibility:', error);
             return false;

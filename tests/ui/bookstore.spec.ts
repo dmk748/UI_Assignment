@@ -40,7 +40,7 @@ test('Validate Book-Search Functionality in Bookstore Application', async ({ pag
 
     await test.step('Validate search result contains the book', async () => {
         const isVisible = await bookstorePage.isBookVisible(testData.book.name);
-        expect(isVisible).toBe(true);
+        expect(isVisible).toBeTruthy();
     });
 
     await test.step('Print Title, Author and Publisher into a file', async () => {
