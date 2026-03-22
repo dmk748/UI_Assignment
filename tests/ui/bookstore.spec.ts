@@ -13,7 +13,7 @@ import { test, expect } from '../fixtures/UiTestFixture';
 import { testData } from '../../src/data/TestData';
 import { saveBookDetails } from '../../src/utils/ui/fileHelper';
 
-test('Validate Book Search Functionality in Bookstore Application', async ({ page, loginPage, bookstorePage }) => {
+test('Validate Book-Search Functionality in Bookstore Application', async ({ page, loginPage, bookstorePage }) => {
 
     await test.step('Navigate to books store application', async () => {
         await page.goto('/');
