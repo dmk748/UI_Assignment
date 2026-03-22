@@ -7,3 +7,13 @@ export const testData = {
     name: 'Learning JavaScript Design Patterns'
   }
 };
+export const userData = {
+  createUser: {
+    name: 'morpheus',
+    job: 'leader'
+  },
+  updateUser: {
+    name: 'neo',
+    job: 'the one'
+  }
+};

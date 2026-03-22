@@ -9,11 +9,11 @@
 8.Click on log out button
 */
 
-import { test, expect } from '../src/fixtures/TestFixture';
-import { testData } from '../src/data/TestData';
-import { saveBookDetails } from '../src/utils/TestUtil';
+import { test, expect } from '../../src/fixtures/TestFixture';
+import { testData } from '../../src/data/TestData';
+import { saveBookDetails } from '../../src/utils/ui/fileHelper';
 
-test('Validating Book Search Functionality in Bookstore Application', async ({ page, loginPage, bookstorePage }) => {
+test('Validate Book Search Functionality in Bookstore Application', async ({ page, loginPage, bookstorePage }) => {
 
     await test.step('Navigate to books store application', async () => {
         await page.goto('/');
