@@ -9,7 +9,7 @@
 8.Click on log out button
 */
 
-import { test, expect } from '../../src/fixtures/TestFixture';
+import { test, expect } from '../fixtures/UiTestFixture';
 import { testData } from '../../src/data/TestData';
 import { saveBookDetails } from '../../src/utils/ui/fileHelper';
 

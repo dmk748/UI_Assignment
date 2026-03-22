@@ -9,11 +9,11 @@ export const testData = {
 };
 export const userData = {
   createUser: {
-    name: 'morpheus',
-    job: 'leader'
+    name: 'Mukkavar',
+    job: 'QA'
   },
   updateUser: {
-    name: 'neo',
-    job: 'the one'
+    name: 'Mukkavar Updated',
+    job: 'Senior QA'
   }
 };
