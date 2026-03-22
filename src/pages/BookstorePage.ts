@@ -36,12 +36,14 @@ export class BookstorePage {
             console.error('Error occurred while filling search box:', error);
         }
     }
-
-    async isBookVisible(bookName: string) {
-        try{
-        return this.page.getByRole('link', { name: bookName }).isVisible();
-        } catch (error) {
-            console.error('Error occurred while checking book visibility:', error);
+    bookLocator(bookName: string) {
+        return this.page.getByText(bookName, { exact: false });
+    }
+    async isBookVisible(bookName: string): Promise<boolean> {
+        try {
+            await this.bookLocator(bookName).waitFor({ state: 'visible', timeout: 5000 });
+            return true;
+        } catch {
             return false;
         }
     }
